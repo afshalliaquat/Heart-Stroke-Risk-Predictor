@@ -2,7 +2,6 @@ import streamlit as st
 import pandas as pd
 import joblib
 
-# Load model and preprocessing objects
 model = joblib.load("KNN_heart.pkl")
 scaler = joblib.load("scaler.pkl")
 expected_columns = joblib.load("columns.pkl")
@@ -77,13 +76,11 @@ st.markdown("""
 """, unsafe_allow_html=True)
 
 
-# --- Page Title ---
 st.title("💓 Heart Stroke Risk Predictor")
 st.markdown("<h4 style='color:#d6336c;'>Check your heart's health status with just a few inputs.</h4>", unsafe_allow_html=True)
 
 st.set_page_config(page_title="Heart Risk Predictor", page_icon="❤️", layout="centered")
 
-# --- User Inputs ---
 age = st.slider("🧓 Age", 18, 100, 40)
 sex = st.selectbox("⚥ Sex", ["M", "F"])
 chest_pain = st.selectbox("💢 Chest Pain Type", ["ATA", "NAP", "TA", "ASY"])
@@ -96,7 +93,6 @@ exercise_angina = st.selectbox("🏃 Exercise-Induced Angina", ["Y", "N"])
 oldpeak = st.slider("📉 Oldpeak (ST Depression)", 0.0, 6.0, 1.0)
 st_slope = st.selectbox("📈 ST Slope", ["Up", "Flat", "Down"])
 
-# --- Prediction ---
 if st.button("🔍 Predict"):
 
     raw_input = {
@@ -130,7 +126,6 @@ if st.button("🔍 Predict"):
     else:
         st.success("✅ **Low Risk of Heart Disease**\n\nKeep up the healthy lifestyle!")
 
-# Footer
 st.markdown("""
     <hr>
     <p style='text-align:center; color: #888;'>Developed by <b>Afshal</b> | Powered by <i>Streamlit</i></p>
