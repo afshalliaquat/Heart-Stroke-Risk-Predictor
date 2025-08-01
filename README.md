@@ -41,4 +41,4 @@ streamlit run app.py
 <h2>🙋‍♂️ Author</h2>
 <p><strong>Afshal Liaquat</strong><br>
 FAST NUCES | ML Enthusiast | Open to Internships<br>
-🔗 <a href="www.linkedin.com/in/afshal-liaquat-972196205" target="_blank">LinkedIn</a><br>
+🔗 <a href="https://www.linkedin.com/in/afshal-liaquat-972196205" target="_blank">LinkedIn</a><br>
